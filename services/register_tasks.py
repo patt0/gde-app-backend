@@ -12,6 +12,9 @@ from .admin_tasks import TaskCalcImpact
 from .so_tasks import TaskHarvestSO
 from .so_tasks import CronHarvestSO
 
+from .ga_tasks import TaskHarvestGA
+from .ga_tasks import CronHarvestGA
+
 # from .update_blogger_metrics import TaskUpdBlogger
 # from .update_blogger_metrics import CronUpdBlogger
 
@@ -24,6 +27,8 @@ app = webapp2.WSGIApplication([('/crons/new_gplus', CronNewGplus),
                                ('/tasks/upd_gplus', TaskUpdateGplus),
                                ('/crons/harvest_so', CronHarvestSO),
                                ('/tasks/harvest_so', TaskHarvestSO),
+                               ('/crons/harvest_ga', CronHarvestGA),
+                               ('/tasks/harvest_ga', TaskHarvestGA),
                                ('/tasks/calc_impact', TaskCalcImpact),
                                # ('/crons/upd_blogger', CronUpdBlogger),
                                # ('/tasks/upd_blogger', TaskUpdBlogger),
